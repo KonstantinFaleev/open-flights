@@ -3,8 +3,8 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resource :airlines, param: :slug
-      resource :reviews, only: [:create, :destroy]
+      resources :airlines, param: :slug
+      resources :reviews, only: %i[create destroy]
     end
   end
 
